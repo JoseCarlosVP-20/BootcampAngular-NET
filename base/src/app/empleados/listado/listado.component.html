@@ -1,0 +1,10 @@
+<p>listado works!</p>
+
+<ul>
+    <li *ngFor="let empleado of empleados">
+        <h1>{{empleado.nombres | titlecase}} {{empleado.apellidos | titlecase}}</h1>
+        <h2>{{empleado.direccion | uppercase}}</h2>
+        <h2>{{empleado.sueldo | currency}}</h2>
+        <hr>
+    </li>
+</ul>
