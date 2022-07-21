@@ -1,6 +1,16 @@
-<p>listado works!</p>
+<h1>Listado de {{titulo}}</h1>
 
 <ul>
+    <button (click)="borrar()">Borrar</button>
+    <div *ngIf="etiquetaBorrado; else noBorrado">
+        <h3>Empleado borrado</h3>
+        <span>{{etiquetaBorrado}}</span>
+    </div>
+
+    <ng-template #noBorrado>
+        <h3>No se borró ningún empleado</h3>
+    </ng-template>
+
     <li *ngFor="let empleado of empleados">
         <h1>{{empleado.nombres | titlecase}} {{empleado.apellidos | titlecase}}</h1>
         <h2>{{empleado.direccion | uppercase}}</h2>
