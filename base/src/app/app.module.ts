@@ -3,20 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AcumuladorComponent } from './acumulador/acumulador.component';
-import { EmpleadoComponent } from './empleados/empleado/empleado.component';
-import { ListadoComponent } from './empleados/listado/listado.component';
+import { EmpleadosModule } from './empleados/empleados.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AcumuladorComponent,
-    EmpleadoComponent,
-    ListadoComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, AcumuladorComponent],
+  imports: [BrowserModule, EmpleadosModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
