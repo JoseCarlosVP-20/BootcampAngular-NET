@@ -29,3 +29,7 @@ button {
   flex-grow: 1;
   margin-right: 10px;
 }
+input{
+  display: block;
+  margin: 5px;
+}
