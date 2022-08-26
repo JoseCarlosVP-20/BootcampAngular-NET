@@ -4,7 +4,10 @@
             <input
               type="text"
               class="form-control"
-              placeholder="Buscar...">
+              placeholder="Buscar..."
+              name="buscar"
+              [(ngModel)]="buscar" 
+               (keyup.enter)="busqueda()"/>
         </div>
     </div>
 </div>
